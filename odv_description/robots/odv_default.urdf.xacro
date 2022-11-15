@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<robot name="itu_odv" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <xacro:arg name="namespace" default="odv"/>
+
+    <xacro:include filename="$(find odv_description)/urdf/base.urdf.xacro"/>
+
+    <xacro:odv_base namespace="$(arg namespace)">
+        <gazebo>
+            <plugin name="vehicle_controller_plugin" filename="libgazebo_ros_planar_move.so">
+                <commandTopic>cmd_vel</commandTopic>
+                <odometryTopic>odom</odometryTopic>
+                <odometryFrame>odom</odometryFrame>
+                <odometryRate>50.0</odometryRate>
+                <robotBaseFrame>$(arg namespace)/base_link</robotBaseFrame>
+                <publishTF>true</publishTF>
+            </plugin>
+        </gazebo>
+    </xacro:odv_base>
+
+</robot>

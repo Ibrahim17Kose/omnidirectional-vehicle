@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>odv_description</name>
+  <version>0.0.0</version>
+  <description>Omnidirectional Vehicle URDF description package</description>
+
+  <maintainer email="ibrahim17kose@gmail.com">Ibrahim Kose</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roslaunch</build_depend>
+
+  <exec_depend>urdf</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+</package>
